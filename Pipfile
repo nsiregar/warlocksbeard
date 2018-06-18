@@ -5,12 +5,13 @@ name = "pypi"
 
 [packages]
 flask = "*"
-flask-migrate = "*"
-flask-sqlalchemy = "*"
 invoke = "*"
 waitress = "*"
+gunicorn = "*"
+pony = "*"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.6"

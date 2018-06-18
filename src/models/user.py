@@ -1,13 +1,14 @@
+from pony import orm
 from src import db
-from src.helpers.model_helper import BaseModel
 
 
-class User(BaseModel):
-    username = db.Column(db.String(255), nullable=False, unique=True)
-    email = db.Column(db.String(255), nullable=False)
-    first_name = db.Column(db.String(255))
-    last_name = db.Column(db.String(255))
-    active = db.Column(db.Boolean())
+class User(db.Entity):
+    id = orm.PrimaryKey(int, auto=True)
+    username = orm.Required(str, unique=True)
+    email = orm.Required(str, unique=True)
+    first_name = orm.Optional(str)
+    last_name = orm.Optional(str)
+    password = orm.Required(str)
 
     def __repr__(self):
         return '<User> {}'.format(self.username)

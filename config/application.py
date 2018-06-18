@@ -4,9 +4,12 @@ import os
 class BaseConfig:
     DEBUG = False
     TESTING = False
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
-    
+    DATABASE_CONFIG = {
+        'filename': 'filename.db',
+        'create_db': True
+    }
+    DATABASE_PROVIDER = 'sqlite'
+
 
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
