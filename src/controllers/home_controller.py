@@ -8,4 +8,4 @@ home = Blueprint('home', __name__)
 @home.route('/', methods=['GET'])
 @home.route('/index', methods=['GET'])
 def index():
-    return 'TEST'
+    return 'welcome to index page'
