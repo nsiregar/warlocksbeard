@@ -9,6 +9,7 @@ invoke = "*"
 waitress = "*"
 gunicorn = "*"
 pony = "*"
+flask-wtf = "*"
 
 [dev-packages]
 pylint = "*"

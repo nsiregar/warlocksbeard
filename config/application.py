@@ -9,6 +9,7 @@ class BaseConfig:
         'create_db': True
     }
     DATABASE_PROVIDER = 'sqlite'
+    SECRET_KEY = 'secret'
 
 
 class DevelopmentConfig(BaseConfig):
